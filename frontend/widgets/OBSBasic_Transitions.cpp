@@ -782,7 +782,7 @@ void OBSBasic::TBarChanged(int value, QObject *sender)
 	obs_transition_set_manual_time(transition, clampedValue);
 
 	if (sender != tBar) {
-		tBar.setValue(value);
+		tBar->setValue(value);
 	}
 
 	OnEvent(OBS_FRONTEND_EVENT_TBAR_VALUE_CHANGED);
