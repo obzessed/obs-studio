@@ -97,7 +97,9 @@ void OBSBasic::CreateProgramOptions()
 
 	tBar->setProperty("class", "slider-tbar");
 
-	connect(tBar, &QSlider::valueChanged, this, &OBSBasic::TBarChanged);
+	connect(tBar, &QSlider::valueChanged, this, [this](int value) -> {
+		TBarChanged(value, tBar);
+	});
 	connect(tBar, &QSlider::sliderReleased, this, &OBSBasic::TBarReleased);
 
 	layout->addStretch(0);
