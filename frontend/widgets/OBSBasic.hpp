@@ -1566,7 +1566,7 @@ private slots:
 	void TransitionFullyStopped();
 	void TriggerQuickTransition(int id);
 
-	void TBarChanged(int value);
+	void TBarChanged(int value, QWidget *sender = nullptr);
 	void TBarReleased();
 
 	void on_transitionAdd_clicked();
